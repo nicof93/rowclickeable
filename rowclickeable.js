@@ -15,7 +15,7 @@ $.fn.rowclickeable = function () {
         row.css("cursor", 'pointer')
     });
 
-    row.on("click", function () {
+    row.find("td[data-omite!=true]").click(function () {
         window.location.href = row.attr('data-redirect');
     });
 };
